@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda técnicas exclusivas para obter sucesso na sua carta de condução! Participe no evento online gratuito e garanta sua vaga.">
+    <meta name="keywords" content="carta de condução, evento online, técnicas de condução, inscreva-se">
+    <meta property="og:title" content="A Carta de Condução Nunca Foi Tão Fácil!">
+    <meta property="og:description" content="Aprenda técnicas exclusivas para dominar a condução com sucesso. Participe gratuitamente!">
+    <meta property="og:image" content="og_image.jpg">
+    <meta property="og:url" content="URL_DO_SITE">
+    <title>A única oportunidade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            color: #fff;
+            background-color: #000;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Seção Hero */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-image {
+            background: url('bc_resized.png') center/cover no-repeat;
+            height: 60vh;
+            width: 100%;
+        }
+
+        .hero-content {
+            padding: 4rem 2rem;
+            text-align: center;
+            color: #fff;
+            background-color: #000;
+        }
+
+        .hero-content h1 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: #ccc;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(180deg, #ff8c09 0%, rgb(201, 195, 0) 100%);
+            color: #000;
+            font-weight: bold;
+            font-size: 1.25rem;
+            padding: 16px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            transform: scale(1);
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            background-color: #e6c800;
+        }
+
+        .cta-button:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 5px rgba(255, 140, 9, 0.5);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 140, 9, 0.7);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 5px rgba(255, 140, 9, 0.5);
+            }
+        }
+
+        /* Episodes Section */
+        .episodes {
+            padding: 4rem 1rem;
+            text-align: center;
+            background-color: #000;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .episodes h2 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ffdd00;
+        }
+
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .episode-card {
+            background-color: #111;
+            border: 1px solid #222;
+            padding: 0.5rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .episode-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 221, 0, 0.6);
+        }
+
+        .episode-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .episode-card h3 {
+            color: #ffdd00;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Register Section */
+        .register {
+            padding: 4rem 1rem;
+            text-align: center;
+            background-color: #000;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .register-box {
+            background: url('bc.jpg') center/cover no-repeat;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.4);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .register h2 {
+            font-family: "Josefin Sans", sans-serif;
+            color: #ffdd00;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .register p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #eee;
+        }
+
+        .register-button {
+            display: inline-block;
+            background-color: #ffdd00;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.25rem;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .register-button:hover {
+            background-color: #e6c800;
+        }
+
+        .register-button:active {
+            transform: scale(0.95);
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            padding: 1rem 0;
+        }
+
+        .footer a {
+            color: #888;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <h1>A carta de condução<span style="color: #ff8c09;"> nunca foi tão FÁCIL</span></h1>
+            <p>Durante as aulas, vais aprender como implementar todas as</p>
+            <p>técnicas que te vão fazer ter sucesso na condução!</p>
+            <a href="tel:+351937993286" class="cta-button">Clica aqui para garantires o teu lugar</a>
+        </div>
+    </section>
+
+    <!-- Episodes Section -->
+    <section id="episodes" class="episodes">
+        <h2>Não perca a boleia para a  <span style="color: #ffdd00;">carta</span> </h2>
+        <div class="episode-grid">
+            <div class="episode-card">
+                <img src="episode1.jpg" alt="Episódio 1">
+                <h3>Cupra</h3>
+            
+            </div>
+            <div class="episode-card">
+                <img src="episode2.jpeg" alt="Episódio 2">
+                <h3>BMW</h3>
+            
+            </div>
+            <div class="episode-card">
+                <img src="episode3.jpeg" alt="Episódio 3">
+                <h3>Renault</h3>
+            </div>
+            <div class="episode-card">
+                <img src="episode4.jpg" alt="Episódio 4">
+                <h3>Toyota</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="register">
+        <div class="register-box">
+            <h2>Garanta  AGORA o Seu Lugar Agora!</h2>
+            <p>Não perca a oportunidade de pertencer à elite da condução!</p>
+            <a href="tel:+351937993286" class="register-button">Inscreva-se Já!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Todos os direitos reservados. Desenvolvido com paixão.</p>
+        <p><a href="#">Termos e Condições</a> | <a href="#">Política de Privacidade</a></p>
+    </footer>
+</body>
+</html>

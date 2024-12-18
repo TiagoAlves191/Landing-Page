@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            color: #fff;
+            background-color: #000;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Cabeçalho */
+        .header {
+            text-align: center;
+            padding: 2rem;
+            background: url('bc.jpg') center/cover no-repeat;
+            color: #ffdd00;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .header h1 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Container do questionário */
+        .questionnaire-container {
+            max-width: 600px;
+            margin: 3rem auto;
+            background-color: #111;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(255, 221, 0, 0.4);
+        }
+
+        .questionnaire-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .questionnaire-header h2 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 2rem;
+            color: #ffdd00;
+        }
+
+        .questionnaire-header p {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        /* Formulário */
+        .questionnaire-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .questionnaire-form label {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #ffdd00;
+        }
+
+        .questionnaire-form input,
+        .questionnaire-form select,
+        .questionnaire-form textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background-color: #222;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .questionnaire-form input:focus,
+        .questionnaire-form select:focus,
+        .questionnaire-form textarea:focus {
+            border-color: #ffdd00;
+            box-shadow: 0 0 10px rgba(255, 221, 0, 0.7);
+        }
+
+        .questionnaire-form textarea {
+            resize: none;
+        }
+
+        /* Botão de envio */
+        .submit-button {
+            align-self: center;
+            display: inline-block;
+            background: linear-gradient(180deg, #ff8c09 0%, rgb(201, 195, 0) 100%);
+            color: #000;
+            font-weight: bold;
+            font-size: 1.25rem;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #e6c800;
+            transform: scale(1.05);
+        }
+
+        .submit-button:active {
+            transform: scale(0.95);
+        }
+
+        /* Rodapé */
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #111;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .footer a {
+            color: #ffdd00;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <h1>Garante já o teu lugar entre a elite da condução</h1>
+        <p>Responda ao questionário e prepare-se para o sucesso</p>
+    </header>
+
+    <!-- Container do Questionário -->
+    <div class="questionnaire-container">
+        <div class="questionnaire-header">
+            <h2>Questionário</h2>
+            <p>Responda as questões abaixo e nós entraremos em contacto</p>
+        </div>
+        <form class="questionnaire-form" action="#" method="post">
+            <label for="name">Nome Completo</label>
+            <input type="text" id="name" name="name" placeholder="Digite o seu nome" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Digite o seu email" required>
+
+            <label for="age">Idade</label>
+            <select id="age" name="age">
+                <option value="" disabled selected>Selecione sua faixa etária</option>
+                <option value="18-25">18-25 anos</option>
+                <option value="26-35">26-35 anos</option>
+                <option value="36-50">36-50 anos</option>
+                <option value="51+">51 anos ou mais</option>
+            </select>
+
+            <label for="experience">Já possui experiência em condução?</label>
+            <select id="experience" name="experience">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="yes">Sim</option>
+                <option value="no">Não</option>
+            </select>
+
+            <label for="expectations">Quais são as suas expectativas para este evento?</label>
+            <textarea id="expectations" name="expectations" rows="4" placeholder="Descreva suas expectativas"></textarea>
+
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Evento de Condução | <a href="#">Termos de Uso</a></p>
+    </footer>
+</body>
+</html>
